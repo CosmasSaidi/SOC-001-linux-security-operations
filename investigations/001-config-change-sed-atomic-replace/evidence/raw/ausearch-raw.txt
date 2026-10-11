@@ -1,0 +1,156 @@
+----
+time->Fri Oct  2 22:01:51 2026
+type=PROCTITLE msg=audit(1790967711.217:447): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1790967711.217:447): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790967711.217:447): cwd="/"
+type=SOCKADDR msg=audit(1790967711.217:447): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1790967711.217:447): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7fff1f975590 a2=458 a3=0 items=1 ppid=22895 pid=22917 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1790967711.217:447): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=1
+----
+time->Fri Oct  2 22:02:23 2026
+type=PROCTITLE msg=audit(1790967743.711:459): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=SOCKADDR msg=audit(1790967743.711:459): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1790967743.711:459): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffed054df40 a2=458 a3=0 items=0 ppid=23030 pid=23051 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1790967743.711:459): auid=4294967295 ses=4294967295 subj=unconfined op=remove_rule key="soc_sensitive_config" list=4 res=1
+----
+time->Fri Oct  2 22:02:23 2026
+type=PROCTITLE msg=audit(1790967743.711:463): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1790967743.711:463): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790967743.711:463): cwd="/"
+type=SOCKADDR msg=audit(1790967743.711:463): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1790967743.711:463): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffed05503c0 a2=458 a3=0 items=1 ppid=23030 pid=23051 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1790967743.711:463): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=1
+----
+time->Fri Oct  2 22:04:06 2026
+type=PROCTITLE msg=audit(1790967846.687:477): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=SOCKADDR msg=audit(1790967846.687:477): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1790967846.687:477): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffc4cf24e50 a2=458 a3=0 items=0 ppid=23172 pid=23193 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1790967846.687:477): auid=4294967295 ses=4294967295 subj=unconfined op=remove_rule key="soc_sensitive_config" list=4 res=1
+----
+time->Fri Oct  2 22:04:06 2026
+type=PROCTITLE msg=audit(1790967846.687:481): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1790967846.687:481): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790967846.687:481): cwd="/"
+type=SOCKADDR msg=audit(1790967846.687:481): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1790967846.687:481): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffc4cf272d0 a2=458 a3=0 items=1 ppid=23172 pid=23193 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1790967846.687:481): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=1
+----
+time->Fri Oct  2 22:17:38 2026
+type=PROCTITLE msg=audit(1790968658.888:517): proctitle=736564002D6900732F6D61785F6C6F67696E5F617474656D707473203D20352F6D61785F6C6F67696E5F617474656D707473203D203130302F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1790968658.888:517): item=4 name="/tmp/soc-security-lab/security.conf" inode=840 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968658.888:517): item=3 name="/tmp/soc-security-lab/security.conf" inode=796 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968658.888:517): item=2 name="/tmp/soc-security-lab/sed59csVc" inode=840 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968658.888:517): item=1 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968658.888:517): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790968658.888:517): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1790968658.888:517): arch=c000003e syscall=82 success=yes exit=0 a0=563b73f25990 a1=7ffd88e56d8a a2=563e10456635 a3=0 items=5 ppid=23554 pid=23557 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts5 ses=123 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Fri Oct  2 22:18:19 2026
+type=PROCTITLE msg=audit(1790968699.369:518): proctitle=736564002D6900732F6D61785F6C6F67696E5F617474656D707473203D203130302F6D61785F6C6F67696E5F617474656D707473203D20352F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1790968699.369:518): item=4 name="/tmp/soc-security-lab/security.conf" inode=841 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968699.369:518): item=3 name="/tmp/soc-security-lab/security.conf" inode=840 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968699.369:518): item=2 name="/tmp/soc-security-lab/sedexBOTg" inode=841 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968699.369:518): item=1 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790968699.369:518): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790968699.369:518): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1790968699.369:518): arch=c000003e syscall=82 success=yes exit=0 a0=558b319e60c0 a1=7ffcb621ed8a a2=558e692d79a6 a3=0 items=5 ppid=23581 pid=23584 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts5 ses=123 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Sat Oct  3 05:57:56 2026
+type=PROCTITLE msg=audit(1790996276.247:1169): proctitle=2F7573722F62696E2F736564002D6900732F6D61785F6C6F67696E5F617474656D707473203D20352F6D61785F6C6F67696E5F617474656D707473203D203130302F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1790996276.247:1169): item=4 name="/tmp/soc-security-lab/security.conf" inode=1065 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996276.247:1169): item=3 name="/tmp/soc-security-lab/security.conf" inode=841 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996276.247:1169): item=2 name="/tmp/soc-security-lab/sedUwQKpC" inode=1065 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996276.247:1169): item=1 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996276.247:1169): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790996276.247:1169): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1790996276.247:1169): arch=c000003e syscall=82 success=yes exit=0 a0=55b98943c990 a1=7ffed69f2d8a a2=55bcd2db5d2c a3=0 items=5 ppid=31063 pid=31066 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts5 ses=123 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Sat Oct  3 05:58:24 2026
+type=PROCTITLE msg=audit(1790996304.787:1171): proctitle=2F7573722F62696E2F736564002D6900732F6D61785F6C6F67696E5F617474656D707473203D203130302F6D61785F6C6F67696E5F617474656D707473203D20352F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1790996304.787:1171): item=4 name="/tmp/soc-security-lab/security.conf" inode=1066 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996304.787:1171): item=3 name="/tmp/soc-security-lab/security.conf" inode=1065 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996304.787:1171): item=2 name="/tmp/soc-security-lab/sedRZmME2" inode=1066 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996304.787:1171): item=1 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996304.787:1171): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790996304.787:1171): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1790996304.787:1171): arch=c000003e syscall=82 success=yes exit=0 a0=555684dfb0c0 a1=7ffd02a99d8a a2=5553d1b7fdbb a3=0 items=5 ppid=31084 pid=31085 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts5 ses=123 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Sat Oct  3 06:00:50 2026
+type=PROCTITLE msg=audit(1790996450.782:1173): proctitle=2F7573722F62696E2F736564002D6900732F6D61785F6C6F67696E5F617474656D707473203D203130302F6D61785F6C6F67696E5F617474656D707473203D20352F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1790996450.782:1173): item=4 name="/tmp/soc-security-lab/security.conf" inode=1067 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996450.782:1173): item=3 name="/tmp/soc-security-lab/security.conf" inode=1066 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996450.782:1173): item=2 name="/tmp/soc-security-lab/sedJJVGNQ" inode=1067 dev=00:2a mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996450.782:1173): item=1 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790996450.782:1173): item=0 name="/tmp/soc-security-lab/" inode=795 dev=00:2a mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790996450.782:1173): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1790996450.782:1173): arch=c000003e syscall=82 success=yes exit=0 a0=5574255cc0c0 a1=7ffde2639d8a a2=5571721e958c a3=0 items=5 ppid=31124 pid=31125 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts5 ses=123 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Sun Oct  4 18:03:53 2026
+type=PROCTITLE msg=audit(1791126233.519:7): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1791126233.519:7): item=0 name="/tmp/soc-security-lab/security.conf" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791126233.519:7): cwd="/"
+type=SOCKADDR msg=audit(1791126233.519:7): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1791126233.519:7): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffe1e5d5b80 a2=458 a3=0 items=1 ppid=792 pid=835 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1791126233.519:7): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=0
+----
+time->Sun Oct  4 19:09:05 2026
+type=PROCTITLE msg=audit(1791130145.375:9): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1791130145.375:9): item=0 name="/tmp/soc-security-lab/security.conf" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791130145.375:9): cwd="/"
+type=SOCKADDR msg=audit(1791130145.375:9): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1791130145.375:9): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffe49561590 a2=458 a3=0 items=1 ppid=743 pid=773 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1791130145.375:9): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=0
+----
+time->Sun Oct  4 19:46:40 2026
+type=PROCTITLE msg=audit(1791132400.460:7): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1791132400.460:7): item=0 name="/tmp/soc-security-lab/security.conf" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791132400.460:7): cwd="/"
+type=SOCKADDR msg=audit(1791132400.460:7): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1791132400.460:7): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffdd0bd0b30 a2=458 a3=0 items=1 ppid=769 pid=824 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1791132400.460:7): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=0
+----
+time->Sun Oct  4 20:05:35 2026
+type=PROCTITLE msg=audit(1791133535.636:7): proctitle=2F7362696E2F617564697463746C002D52002F6574632F61756469742F61756469742E72756C6573
+type=PATH msg=audit(1791133535.636:7): item=0 name="/tmp/soc-security-lab/security.conf" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791133535.636:7): cwd="/"
+type=SOCKADDR msg=audit(1791133535.636:7): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1791133535.636:7): arch=c000003e syscall=44 success=yes exit=1112 a0=3 a1=7ffeebd41eb0 a2=458 a3=0 items=1 ppid=789 pid=821 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1791133535.636:7): auid=4294967295 ses=4294967295 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=0
+----
+time->Sun Oct 11 14:24:12 2026
+type=PROCTITLE msg=audit(1791717852.327:11403): proctitle=617564697463746C002D6100616C776179732C65786974002D46006172636800623634002D53006F70656E2C6F70656E61742C6F70656E6174322C63726561742C7472756E636174652C667472756E636174652C66616C6C6F636174652C77726974652C73657478617474722C6C73657478617474722C667365747861747472
+type=PATH msg=audit(1791717852.327:11403): item=0 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791717852.327:11403): cwd="/home/<USER>"
+type=SOCKADDR msg=audit(1791717852.327:11403): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1791717852.327:11403): arch=c000003e syscall=44 success=yes exit=1112 a0=4 a1=7fffc4986860 a2=458 a3=0 items=1 ppid=215475 pid=215476 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts10 ses=917 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1791717852.327:11403): auid=1000 ses=917 subj=unconfined op=add_rule key="soc_sensitive_config" list=4 res=1
+----
+time->Sun Oct 11 14:24:12 2026
+type=PROCTITLE msg=audit(1791717852.375:11418): proctitle=736564002D6900732F5E73657373696F6E5F74696D656F75745F6D696E75746573203D2031352F73657373696F6E5F74696D656F75745F6D696E75746573203D2032302F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1791717852.375:11418): item=4 name="/tmp/soc-security-lab/security.conf" inode=7722 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717852.375:11418): item=3 name="/tmp/soc-security-lab/security.conf" inode=7721 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717852.375:11418): item=2 name="/tmp/soc-security-lab/sedrEJ7yV" inode=7722 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717852.375:11418): item=1 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717852.375:11418): item=0 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791717852.375:11418): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1791717852.375:11418): arch=c000003e syscall=82 success=yes exit=0 a0=55882dabba50 a1=7ffe465c4da7 a2=558d7529636c a3=0 items=5 ppid=215445 pid=215499 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts9 ses=917 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Sun Oct 11 14:24:14 2026
+type=PROCTITLE msg=audit(1791717854.431:11419): proctitle=736564002D6900732F5E6D61785F6C6F67696E5F617474656D707473203D20352F6D61785F6C6F67696E5F617474656D707473203D203130302F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1791717854.431:11419): item=4 name="/tmp/soc-security-lab/security.conf" inode=7723 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.431:11419): item=3 name="/tmp/soc-security-lab/security.conf" inode=7722 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.431:11419): item=2 name="/tmp/soc-security-lab/sedVPwVOd" inode=7723 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.431:11419): item=1 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.431:11419): item=0 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791717854.431:11419): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1791717854.431:11419): arch=c000003e syscall=82 success=yes exit=0 a0=55a8aa110a60 a1=7ffc75854da7 a2=55adf09ba8f0 a3=0 items=5 ppid=215445 pid=215515 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts9 ses=917 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"
+----
+time->Sun Oct 11 14:24:14 2026
+type=PROCTITLE msg=audit(1791717854.439:11420): proctitle=736564002D6900732F5E726571756972655F6D6661203D20747275652F726571756972655F6D6661203D2066616C73652F002F746D702F736F632D73656375726974792D6C61622F73656375726974792E636F6E66
+type=PATH msg=audit(1791717854.439:11420): item=4 name="/tmp/soc-security-lab/security.conf" inode=7724 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.439:11420): item=3 name="/tmp/soc-security-lab/security.conf" inode=7723 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.439:11420): item=2 name="/tmp/soc-security-lab/sedw0d0Pv" inode=7724 dev=00:2b mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.439:11420): item=1 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791717854.439:11420): item=0 name="/tmp/soc-security-lab/" inode=7720 dev=00:2b mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791717854.439:11420): cwd="/home/<USER>"
+type=SYSCALL msg=audit(1791717854.439:11420): arch=c000003e syscall=82 success=yes exit=0 a0=55a82881b640 a1=7ffe9dc5dda7 a2=55ad72033f2b a3=0 items=5 ppid=215445 pid=215516 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts9 ses=917 comm="sed" exe="/usr/bin/sed" subj=unconfined key="soc_sensitive_config"

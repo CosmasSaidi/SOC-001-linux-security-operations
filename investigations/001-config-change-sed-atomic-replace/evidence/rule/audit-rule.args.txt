@@ -1,0 +1,11 @@
+always,exit
+-F
+arch=b64
+-S
+open,openat,openat2,creat,truncate,ftruncate,fallocate,write,setxattr,lsetxattr,fsetxattr,removexattr,lremovexattr,fremovexattr,chmod,fchmod,chown,fchown,lchown
+-F
+path=/tmp/soc-security-lab/security.conf
+-F
+perm=wa
+-F
+key=soc_sensitive_config

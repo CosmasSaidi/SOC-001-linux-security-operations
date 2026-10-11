@@ -1,0 +1,438 @@
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SOC DETECTION ENGINE  v1.0.0
+  Rule:     sensitive-config-modification
+  Key:      soc_sensitive_config
+  File:     /tmp/soc-security-lab/security.conf
+  Run time: 2026-10-11 14:24:19 EAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          1173
+  Epoch timestamp:       1790996450
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            31124 / 31125
+  tty:                   pts5
+  session:               123
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             /usr/bin/sed -i s/max_login_attempts = 100/max_login_attempts = 5/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-03 06:00:50 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               /usr/bin/sed -i s/max_login_attempts = 100/max_login_attempts = 5/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-03 06:00:50 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts5, ses=123)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 123?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #2
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          11418
+  Epoch timestamp:       1791717852
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            215445 / 215499
+  tty:                   pts9
+  session:               917
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             sed -i s/^session_timeout_minutes = 15/session_timeout_minutes = 20/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-11 14:24:12 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               sed -i s/^session_timeout_minutes = 15/session_timeout_minutes = 20/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-11 14:24:12 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts9, ses=917)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 917?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #3
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          11419
+  Epoch timestamp:       1791717854
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            215445 / 215515
+  tty:                   pts9
+  session:               917
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             sed -i s/^max_login_attempts = 5/max_login_attempts = 100/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-11 14:24:14 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               sed -i s/^max_login_attempts = 5/max_login_attempts = 100/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-11 14:24:14 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts9, ses=917)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 917?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #4
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          11420
+  Epoch timestamp:       1791717854
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            215445 / 215516
+  tty:                   pts9
+  session:               917
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             sed -i s/^require_mfa = true/require_mfa = false/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-11 14:24:14 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               sed -i s/^require_mfa = true/require_mfa = false/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-11 14:24:14 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts9, ses=917)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 917?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #5
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          517
+  Epoch timestamp:       1790968658
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            23554 / 23557
+  tty:                   pts5
+  session:               123
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             sed -i s/max_login_attempts = 5/max_login_attempts = 100/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-02 22:17:38 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               sed -i s/max_login_attempts = 5/max_login_attempts = 100/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-02 22:17:38 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts5, ses=123)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 123?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #6
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          518
+  Epoch timestamp:       1790968699
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            23581 / 23584
+  tty:                   pts5
+  session:               123
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             sed -i s/max_login_attempts = 100/max_login_attempts = 5/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-02 22:18:19 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               sed -i s/max_login_attempts = 100/max_login_attempts = 5/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-02 22:18:19 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts5, ses=123)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 123?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #7
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          1169
+  Epoch timestamp:       1790996276
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            31063 / 31066
+  tty:                   pts5
+  session:               123
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             /usr/bin/sed -i s/max_login_attempts = 5/max_login_attempts = 100/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-03 05:57:56 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               /usr/bin/sed -i s/max_login_attempts = 5/max_login_attempts = 100/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-03 05:57:56 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts5, ses=123)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 123?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [TELEMETRY] Raw audit event #8
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Audit key:             soc_sensitive_config
+  Audit serial:          1171
+  Epoch timestamp:       1790996304
+  Syscall number:        82
+  Exit code:             0
+  auid (numeric):        1000
+  uid  (numeric):        1000
+  euid (numeric):        1000
+  gid  (numeric):        1000
+  ppid / pid:            31084 / 31085
+  tty:                   pts5
+  session:               123
+  comm:                  sed
+  exe:                   /usr/bin/sed
+  cwd:                   /home/<USER>
+  proctitle:             /usr/bin/sed -i s/max_login_attempts = 100/max_login_attempts = 5/ /tmp/soc-security-lab/security.conf
+
+  [DETECTION] Rule: sensitive-config-modification
+  ─────────────────────────────────────────────────────────────────────
+  Rule matched:          soc_sensitive_config (auditd key)
+  Monitored file:        /tmp/soc-security-lab/security.conf
+  Affected path:         /tmp/soc-security-lab/security.conf
+  Syscall:               rename (82)
+  Action:                RENAME
+  Result:                yes
+  Timestamp:             2026-10-03 05:58:24 EAT
+  auid:                  <USER> (1000)
+  uid:                   <USER> (1000)
+  euid:                  <USER> (1000)
+  executable:            /usr/bin/sed
+  command:               /usr/bin/sed -i s/max_login_attempts = 100/max_login_attempts = 5/ /tmp/soc-security-lab/security.conf
+
+  [ALERT] Event requires analyst review
+  ─────────────────────────────────────────────────────────────────────
+  Summary:               <USER> ran sed at 2026-10-03 05:58:24 EAT and renamed /tmp/soc-security-lab/security.conf
+
+  Automated context notes:
+    • No automated risk indicators — context review still required
+
+  Analyst next steps:   
+    1. Was this change authorized? Check change-management records.
+    2. Is sed the expected editor for this file?
+    3. Was <USER> logged in interactively (tty=pts5, ses=123)?
+    4. What changed? Diff the file against last known-good backup.
+    5. Were there preceding suspicious events in session 123?
+    6. Confirm no other processes touched the file in this window.
+
+  NOTE: This detection fires on ALL writes to the monitored file.
+        A match is NOT a confirmed incident. Analyst context decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RESULT: 8 file-modification event(s) found and processed.
+  All events require analyst review before declaring an incident.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

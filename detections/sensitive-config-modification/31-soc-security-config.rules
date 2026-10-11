@@ -1,0 +1,20 @@
+## SOC-001 — sensitive configuration file modification monitoring
+## Detection key: soc_sensitive_config
+##
+## Install (persistent):  copy to /etc/audit/rules.d/31-soc-security-config.rules
+##                        then: sudo augenrules --load
+## Load (ephemeral/lab):  sudo auditctl -R 31-soc-security-config.rules
+##
+## NOTE ON SCOPE:
+##   The path below is the DISPOSABLE LAB target used in investigation 001
+##   (/tmp/soc-security-lab/security.conf). For real monitoring, replace it with
+##   the actual sensitive file you intend to watch (one rule per path).
+##
+## WHY perm=wa MATTERS:
+##   perm=wa makes the kernel expand this to all write/attribute-change syscalls,
+##   including the rename family. That is why `sed -i` (which writes a temp file
+##   then rename()s it over the target, syscall 82) is captured even though
+##   "rename" is not in the explicit -S list below. The loaded/expanded form is
+##   preserved in investigations/001/evidence/rule/audit-rule.loaded.txt.
+
+-a always,exit -F arch=b64 -S open,openat,openat2,creat,truncate,ftruncate,fallocate,write,setxattr,lsetxattr,fsetxattr,removexattr,lremovexattr,fremovexattr,chmod,fchmod,chown,fchown,lchown -F path=/tmp/soc-security-lab/security.conf -F perm=wa -F key=soc_sensitive_config

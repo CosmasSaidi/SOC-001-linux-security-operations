@@ -1,0 +1,19 @@
+[2026-10-11 14:24:05 EAT] SOC-001 capture start (user=<USER> uid=1000 auid=1000)
+[2026-10-11 14:24:05 EAT] 2A: create disposable lab file (pre-rule, unaudited)
+[2026-10-11 14:24:05 EAT] 2A: load audit rule (sudo) + validate
+[2026-10-11 14:24:12 EAT] 2A: rule loaded
+[2026-10-11 14:24:12 EAT] 2B: AUTHORIZED change — session_timeout 15 -> 20 (benign maintenance)
+[2026-10-11 14:24:12 EAT] 2B: authorized change applied at 14:24:12
+[2026-10-11 14:24:14 EAT] 2C: SUSPICIOUS change — weaken auth on the DISPOSABLE lab file
+[2026-10-11 14:24:14 EAT] 2C: suspicious change applied at 14:24:14
+[2026-10-11 14:24:16 EAT] 2D: capture raw ausearch telemetry (sudo)
+[2026-10-11 14:24:16 EAT] 2D: run detection script (sudo, needs root to read audit.log)
+[2026-10-11 14:24:19 EAT] 2D: evidence written to /home/<USER>/soc-lab/evidence/soc-001-capture
+[2026-10-11 14:24:19 EAT] 2E: reproducibility re-run of detection
+[2026-10-11 14:24:20 EAT] 2E: RERUN DIFFERS — see detection-output.rerun.txt (expected if new events occurred)
+[2026-10-11 14:24:20 EAT] 2E: CLEANUP — delete ephemeral audit rule
+[2026-10-11 14:24:20 EAT] 2E: rule deleted
+[2026-10-11 14:24:20 EAT] 2E: confirmed rule removed
+[2026-10-11 14:24:20 EAT] 2E: removing disposable lab file (evidence copies retained)
+[2026-10-11 14:24:20 EAT] 2E: /tmp/soc-security-lab removed
+[2026-10-11 14:24:20 EAT] CAPTURE COMPLETE. Evidence dir: /home/<USER>/soc-lab/evidence/soc-001-capture
